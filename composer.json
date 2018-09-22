@@ -1,0 +1,28 @@
+{
+    "name": "rogerarruda/laravel-metronic-components",
+    "description": "Components for Laravel Blade based on the Metronic Admin Template (http://bit.ly/Metronic-Template)",
+    "type": "library",
+    "require": {
+        "laravel/laravel": "^5.5.*",
+        "php": "^7.0.0"
+    },
+    "authors": [
+        {
+            "name": "rogerarruda",
+            "email": "roger@interative.info"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "RogerArruda\\LaravelMetronicComponents\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "RogerArruda\\LaravelMetronicComponents\\Providers\\LaravelMetronicComponentsServiceProvider"
+            ]
+        }
+    }
+}

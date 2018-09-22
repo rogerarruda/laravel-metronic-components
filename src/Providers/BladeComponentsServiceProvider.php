@@ -1,11 +1,11 @@
 <?php
 
-namespace RogerArruda\BladeComponents\Providers;
+namespace RogerArruda\LaravelMetronicComponents\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Blade;
 
-class BladeComponentsServiceProvider extends ServiceProvider
+class LaravelMetronicComponentsServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap services.
