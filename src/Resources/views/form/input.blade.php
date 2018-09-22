@@ -1,4 +1,4 @@
-<div class="form-group m-form__group m-form__group--md {{ isset($responsive) ? $responsive : '' }} {{ $errors->has($name) ? ' has-danger' : '' }}">
+<div class="form-group m-form__group m-form__group--md {{ isset($responsive) ? $responsive : '' }} {{ $errors->has($name) ? ' has-danger' : '' }}" id="{{isset($id) ? $id : ''}}">
 	<label for={{ $name }}>{{ $label }} {!! isset($required) ? $required ? '<span class="m--font-danger">*</span>' : '' : '' !!}</label>
 	@isset($icon)
 		<div class="m-input-icon m-input-icon--right">
@@ -10,11 +10,11 @@
 			</div>
 	@endisset
 
-		@isset($type)
+		{{-- @isset($type)
 			@if ($type == 'file')
 				<div id="error_block" class="m-alert alert alert-warning mb-4" style="width: 100%; margin: 0;"></div>
 			@endif
-		@endisset
+		@endisset --}}
 
 		@isset($typeahead)
 			@if ($typeahead)
@@ -28,6 +28,9 @@
 		class="{{ isset($type) ? $type != 'radio' && $type != 'checkbox' ? 'form-control m-input' : '' : 'form-control m-input' }} {{ isset($class) ? $class : '' }}"
 		placeholder="{{ isset($placeholder) ? $placeholder : '' }}"
 		value="{{ empty(old($name)) ? isset($slot) ? trim($slot) : '' : old($name) }}"
+		step="{{ isset($step) ? $step : 1 }}"
+		min="{{ isset($min) ? $min : '' }}"
+		max="{{ isset($max) ? $max : '' }}"
 		{{ isset($required) ? $required ? 'required' : '' : '' }}
 		{{ isset($readonly) ? $readonly ? 'readonly' : '' : '' }}
 		{{ isset($disabled) ? $disabled ? 'disabled' : '' : '' }}

@@ -1,7 +1,7 @@
 <div class="m-form__section
 {{ isset($first) ? $first ? 'm-form__section--first' : '' : '' }}
 {{ isset($last) ? $last ? 'm-form__section--last' : '' : '' }}
-{{ isset($class) ? $class : '' }}">
+{{ isset($class) ? $class : '' }}" id="{{isset($id) ? $id : ''}}">
 
 	@isset($title)
 		<div class="m-form__heading {{ isset($responsive) ? $responsive ? 'col-md-12' : '' : '' }}">

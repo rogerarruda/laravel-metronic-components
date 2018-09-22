@@ -10,7 +10,7 @@
 		data-off-color="{{ isset($off_color) ? $off_color : 'warning' }}">
 
     @isset($help)
-		<span class="m-form__help">{{ $help }}</span>
+		<div class="m-form__help">{{ $help }}</div>
     @endisset
 	@if ($errors->has($name))
 		<div class="form-control-feedback"> {{ $errors->first($name) }} </div>

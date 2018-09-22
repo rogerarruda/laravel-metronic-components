@@ -1,7 +1,7 @@
 <div class="form-group m-form__group m-form__group--md {{ isset($responsive) ? $responsive : '' }} {{ $errors->has($name) ? ' has-danger' : '' }}">
-	<label for={{ $name }}>{{ $label }} {!! isset($required) ? $required ? '<span class="m--font-danger">*</span>' : '' : '' !!}</label>
+	<label for={{ str_replace('[]', '', $name) }}>{{ $label }} {!! isset($required) ? $required ? '<span class="m--font-danger">*</span>' : '' : '' !!}</label>
 
-	<select id={{ $name }} {{ isset($multiple) ? $multiple ? 'multiple' : '' : '' }} name={{ $name }} class="form-control m-select {{ isset($class) ? $class : '' }}"
+	<select id={{ str_replace('[]', '', $name) }} {{ isset($multiple) ? $multiple ? 'multiple' : '' : '' }} name={{ $name }} class="form-control m-select {{ isset($class) ? $class : '' }}"
 	{{ isset($required) ? $required ? 'required' : '' : '' }}
 	{{ isset($readonly) ? $readonly ? 'readonly' : '' : '' }}
 	{{ isset($disabled) ? $disabled ? 'disabled' : '' : '' }}>
