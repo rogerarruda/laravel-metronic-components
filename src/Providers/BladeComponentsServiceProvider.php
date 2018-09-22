@@ -14,10 +14,10 @@ class BladeComponentsServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadViewsFrom(__DIR__.'/../Resources/views', 'components');
+        $this->loadViewsFrom(__DIR__.'/../Resources/views', 'metronic-components');
         $this->publishes([
             __DIR__ . '/../Resources/views' => resource_path('views/vendor/components')
-        ], 'blade-components');
+        ], 'metronic-components');
 
         $this->registerBladeComponents();
     }
@@ -39,20 +39,20 @@ class BladeComponentsServiceProvider extends ServiceProvider
      */
     public function registerBladeComponents()
     {
-        Blade::component('blade-components::badge', 'badge');
-        Blade::component('blade-components::modal', 'modal');
-        Blade::component('blade-components::paginate', 'paginate');
-        Blade::component('blade-components::portlet', 'portlet');
+        Blade::component('metronic-components::badge', 'badge');
+        Blade::component('metronic-components::modal', 'modal');
+        Blade::component('metronic-components::paginate', 'paginate');
+        Blade::component('metronic-components::portlet', 'portlet');
 
-		Blade::component('blade-components::form.section', 'formsection');
-		Blade::component('blade-components::form.layout', 'formlayout');
+		Blade::component('metronic-components::form.section', 'formsection');
+		Blade::component('metronic-components::form.layout', 'formlayout');
 
-		Blade::component('blade-components::form.input', 'input');
-		Blade::component('blade-components::form.textarea', 'textarea');
-		Blade::component('blade-components::form.select', 'select');
-		Blade::component('blade-components::form.option', 'option');
-		Blade::component('blade-components::form.switch', 'switch');
-		Blade::component('blade-components::form.checkbox', 'checkbox');
-		Blade::component('blade-components::form.radio', 'radio');
+		Blade::component('metronic-components::form.input', 'input');
+		Blade::component('metronic-components::form.textarea', 'textarea');
+		Blade::component('metronic-components::form.select', 'select');
+		Blade::component('metronic-components::form.option', 'option');
+		Blade::component('metronic-components::form.switch', 'switch');
+		Blade::component('metronic-components::form.checkbox', 'checkbox');
+		Blade::component('metronic-components::form.radio', 'radio');
     }
 }
