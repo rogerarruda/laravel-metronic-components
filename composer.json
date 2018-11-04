@@ -3,7 +3,6 @@
     "description": "Components for Laravel Blade based on the Metronic Admin Template (http://bit.ly/Metronic-Template)",
     "type": "library",
     "require": {
-        "laravel/laravel": "^5.5",
         "php": "^7.0.0"
     },
     "authors": [
