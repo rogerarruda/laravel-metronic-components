@@ -4,7 +4,7 @@
     "type": "library",
     "require": {
         "php": "^7.0.0",
-        "davejamesmiller/laravel-breadcrumbs": "^4.0.0",
+        "davejamesmiller/laravel-breadcrumbs": "^4.0.0"
     },
     "authors": [
         {
