@@ -1,4 +1,7 @@
-<div class="@if(empty($responsive)) col-lg-12 @else {{$responsive}} @endif">
+<div class="@if(empty($responsive)) col-lg-12 @else {{$responsive}} @endif"
+style="@if(!empty($display)) display: {{ $display }}; @endif
+     @if(!empty($style)) @foreach($style as $key => $item) {{ $key }}:{{ $item }}; @endforeach  @endif">
+     
     <div class="m-portlet @isset($tabs) @if($tabs) m-portlet--tabs @endif @endisset {{ !empty($class) ? $class : '' }}" id="{{ !empty($id) ? $id : '' }}">
 		@if (!empty($header) || !empty($actions))
 			<div class="m-portlet__head">
@@ -34,7 +37,7 @@
             @if (isset($content))
                 {{$content}}
             @endif
-            
+
             @if (isset($slot))
                 {{$slot}}
             @endif
