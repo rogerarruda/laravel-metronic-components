@@ -3,11 +3,15 @@
 	@isset($icon)
 		<div class="m-input-icon m-input-icon--right">
 	@endisset
-	@isset($group)
-		<div class="input-group">
-			<div class="input-group-prepend">
-				<span class="input-group-text" id="basic-addon2">{{ $group }}</span>
-			</div>
+
+    @if (isset($group_left) || isset($group_right))
+        <div class="input-group">
+    @endif
+
+	@isset($group_left)
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="">{{ $group_left }}</span>
+        </div>
 	@endisset
 
 		{{-- @isset($type)
@@ -36,6 +40,12 @@
 		{{ isset($disabled) ? $disabled ? 'disabled' : '' : '' }}
 		/>
 
+        @isset($group_right)
+            <div class="input-group-append">
+                <span class="input-group-text" id="">{{ $group_right }}</span>
+            </div>
+        @endisset
+
 		@isset($icon)
 			<span class="m-input-icon__icon m-input-icon__icon--right"><span><i class="{{ $icon }}"></i></span></span>
 		@endisset
@@ -46,7 +56,7 @@
 			@endif
 		@endisset
 
-	@if(isset($group))
+    @if (isset($group_left) || isset($group_right))
 		</div>
 	@endif
 	@if(isset($icon))
