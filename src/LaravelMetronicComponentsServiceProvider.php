@@ -14,9 +14,9 @@ class LaravelMetronicComponentsServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadViewsFrom(__DIR__.'/../Resources/views', 'metronic');
+        $this->loadViewsFrom(__DIR__.'/Resources/views', 'metronic');
         $this->publishes([
-            __DIR__ . '/../Resources/views' => resource_path('views/vendor/components')
+            __DIR__ . '/Resources/views' => resource_path('views/vendor/components')
         ], 'metronic');
 
         $this->registerBladeComponents();
