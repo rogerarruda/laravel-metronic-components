@@ -21,7 +21,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "RogerArruda\\LaravelMetronicComponents\\Providers\\LaravelMetronicComponentsServiceProvider"
+                "RogerArruda\\LaravelMetronicComponents\\LaravelMetronicComponentsServiceProvider"
             ]
         }
     }
